@@ -9,5 +9,5 @@ class SearchResultPage(BasePage):
 
     def get_follow_button_text(self):
        # time.sleep(2)
-        return self.get_text(self.BUTTON_FOLLOW).text
+        return self.get_text(self.BUTTON_FOLLOW, "Подписаться")
     

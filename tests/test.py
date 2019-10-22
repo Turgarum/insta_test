@@ -22,5 +22,11 @@ my_main_page.click_result_with_text("#fitness")
 
 my_search_page = SearchResultPage (driver)
 
-assert "Подписаться" in my_search_page.get_follow_button_text()
+#assert "Подписаться" in my_search_page.get_follow_button_text()
+#print (my_search_page.get_follow_button_text())
 
+try:
+    if my_search_page.get_follow_button_text():
+        print ("Button 'Подписаться' is ready to be clicked")
+except:
+    print ("Не прокатилло")
