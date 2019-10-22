@@ -15,8 +15,8 @@ my_login_page.click_login()
 
 my_main_page = MainPage(driver)
 my_main_page.click_not_now_button()
-my_main_page.type_in_search_field("#fitness")
-my_main_page.click_result_with_text("#fitness")
+my_main_page.type_in_search_field("#foodporn")
+my_main_page.click_result_with_text("#foodporn")
 
 
 
@@ -30,3 +30,5 @@ try:
         print ("Button 'Подписаться' is ready to be clicked")
 except:
     print ("Не прокатилло")
+
+driver.close()
