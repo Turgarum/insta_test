@@ -8,6 +8,6 @@ class SearchResultPage(BasePage):
     BUTTON_FOLLOW = (By.XPATH,"//button[@type='button']")
 
     def get_follow_button_text(self):
-        time.sleep(2)
-        return self.get_element(self.BUTTON_FOLLOW).text
+       # time.sleep(2)
+        return self.get_text(self.BUTTON_FOLLOW).text
     
