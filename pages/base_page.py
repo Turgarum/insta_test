@@ -20,3 +20,8 @@ class BasePage():
     def type_in(self, locator, text):
         self.get_element(locator).clear()
         self.get_element(locator).send_keys(text)
+
+        
+    def get_text(self, locator):
+        expected_condition = ec.text_to_be_present_in_element (locator)
+        return webDriverWait(self.driver, 10).untill(expected_condition, message="Unable to locate element")
