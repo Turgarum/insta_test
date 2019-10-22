@@ -2,7 +2,7 @@ from selenium import webdriver
 from pages.login_page import LoginPage
 from pages.main_page import MainPage
 from pages.search_results_page import SearchResultPage
-
+import time
 
 driver = webdriver.Chrome('D:\QAA\chromedriver.exe')
 driver.implicitly_wait(10)
@@ -21,6 +21,6 @@ my_main_page.click_result_with_text("#fitness")
 
 
 my_search_page = SearchResultPage (driver)
-time.sleep(2)
-assert "Подписаться" in my_search_page.get_follow_button_text
+
+assert "Подписаться" in my_search_page.get_follow_button_text()
 
